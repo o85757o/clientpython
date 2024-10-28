@@ -1,0 +1,35 @@
+{
+    "proxies": [
+        {
+            "protocol": "tcp",
+            "tls_version": "tls1.2",
+            "listen_ip": "127.0.0.1",
+            "listen_port": 8000,
+            "pass_ips": [
+                "192.168.0.1",
+                "192.168.0.2"
+            ],
+            "pass_port": 9000,
+            "cert_path": "path/to/cert.pem",
+            "key_path": "path/to/key.pem",
+            "listen_tls_options": "",
+            "pass_tls_options": "",
+            "load_balancing": true
+        },
+        {
+            "protocol": "http",
+            "tls_version": "tls1.3",
+            "listen_ip": "127.0.0.1",
+            "listen_port": 8080,
+            "pass_ips": [
+                "192.168.0.3"
+            ],
+            "pass_port": 80,
+            "cert_path": "path/to/cert.pem",
+            "key_path": "path/to/key.pem",
+            "listen_tls_options": "",
+            "pass_tls_options": "",
+            "load_balancing": false
+        }
+    ]
+}
